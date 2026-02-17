@@ -1,157 +1,535 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="Sai Krishna Bharadwaj Burra — MS CS @ University of Oklahoma. Data + ML + Systems." />
   <title>Sai Krishna Bharadwaj Burra | Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+  <!-- background particles -->
+  <canvas id="fx" aria-hidden="true"></canvas>
 
-<header>
-  <div class="container nav-container">
-    <h2 class="logo">Sai Krishna Bharadwaj Burra</h2>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <!-- NAV -->
+  <header class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Krizz</span>
+      </a>
 
-<section class="hero">
-  <div class="container">
-    <h1>Building Reliable Data-Driven Systems</h1>
-    <p>
-      MS in Computer Science at the University of Oklahoma (Expected May 2026).
-      Interested in data engineering, machine learning, and backend systems.
-    </p>
+      <nav class="links" aria-label="Primary navigation">
+        <a class="navlink" href="#about">About</a>
+        <a class="navlink" href="#work">Projects</a>
+        <a class="navlink" href="#skills">Skills</a>
+        <a class="navlink" href="#contact">Contact</a>
+      </nav>
 
-    <div class="hero-buttons">
-      <a class="btn primary" href="#projects">View Projects</a>
-      <a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
+      <div class="nav-actions">
+        <button id="themeBtn" class="icon-btn" type="button" aria-label="Toggle theme">
+          <span class="icon" aria-hidden="true">☾</span>
+        </button>
+        <button id="menuBtn" class="icon-btn burger" type="button" aria-label="Open menu" aria-expanded="false">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
     </div>
 
-    <div class="social">
-      <a href="mailto:Sai.Krishna.Bharadwaj.Burra-1@ou.edu">Email</a>
-      <a href="https://github.com/krizz1909" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/bharadwaj-b-s-k-4a99a11b1/" target="_blank">LinkedIn</a>
+    <div id="mobileMenu" class="mobile" hidden>
+      <a class="navlink" href="#about">About</a>
+      <a class="navlink" href="#work">Projects</a>
+      <a class="navlink" href="#skills">Skills</a>
+      <a class="navlink" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left reveal">
+          <div class="badge">
+            <span class="pulse"></span>
+            MS CS @ University of Oklahoma • Expected May 2026
+          </div>
+
+          <h1>
+            Sai Krishna Bharadwaj Burra
+          </h1>
+
+          <p class="sub">
+            I build <span class="accent">data-driven</span> systems and ship projects that are clean, reliable, and measurable.
+          </p>
+
+          <p class="roles">
+            <span class="muted">Currently focusing on</span>
+            <span class="typing" id="typing"></span>
+            <span class="cursor" aria-hidden="true">|</span>
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" href="#work">View Projects</a>
+            <a class="btn" href="https://github.com/krizz1909" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/bharadwaj-b-s-k-4a99a11b1/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+
+          <div class="meta">
+            <a class="meta-item" href="mailto:Sai.Krishna.Bharadwaj.Burra-1@ou.edu">
+              <span class="k">Email</span>
+              <span class="v">Sai.Krishna.Bharadwaj.Burra-1@ou.edu</span>
+            </a>
+            <div class="meta-item">
+              <span class="k">Location</span>
+              <span class="v">Norman, OK</span>
+            </div>
+            <div class="meta-item">
+              <span class="k">Site</span>
+              <span class="v">krizz1909.github.io</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal">
+          <div class="card-top">
+            <div class="avatar" aria-hidden="true">SK</div>
+            <div>
+              <div class="card-name">Sai Krishna</div>
+              <div class="card-role muted">Data • ML • Systems</div>
+            </div>
+          </div>
+
+          <div class="card-stats">
+            <div class="stat">
+              <div class="stat-num">5+</div>
+              <div class="stat-lab">Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">3</div>
+              <div class="stat-lab">Core areas</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">∞</div>
+              <div class="stat-lab">Learning</div>
+            </div>
+          </div>
+
+          <div class="card-line"></div>
+
+          <div class="quick">
+            <div class="quick-title">Quick Highlights</div>
+            <ul class="ticks">
+              <li>Azure SQL + ER modeling + query optimization</li>
+              <li>Python workflows with evaluation & reporting</li>
+              <li>Spreadsheet-first cleaning + reproducible results</li>
+            </ul>
+          </div>
+
+          <div class="mini-actions">
+            <!-- Optional: add resume.pdf to repo root to enable -->
+            <a class="mini-btn" href="resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
+            <a class="mini-btn" href="#contact">Contact</a>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>About</h2>
+          <p class="muted">A quick overview of what I do and how I work.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="panel reveal">
+            <h3>What I’m good at</h3>
+            <p>
+              Turning messy inputs into structured outputs — clean data, dependable databases, and ML workflows
+              that can be explained clearly.
+            </p>
+            <div class="chips">
+              <span class="chip">Data cleaning</span>
+              <span class="chip">SQL / ER modeling</span>
+              <span class="chip">Python + Pandas</span>
+              <span class="chip">Evaluation & reporting</span>
+              <span class="chip">Web basics</span>
+            </div>
+          </div>
+
+          <div class="panel reveal">
+            <h3>How I like to build</h3>
+            <p>
+              I focus on clarity: simple architecture, measurable results, and readable code. I document decisions,
+              track metrics, and iterate fast.
+            </p>
+            <div class="timeline">
+              <div class="tl">
+                <div class="dot"></div>
+                <div>
+                  <div class="tl-title">Design</div>
+                  <div class="tl-sub muted">ERD, schemas, clean interfaces</div>
+                </div>
+              </div>
+              <div class="tl">
+                <div class="dot"></div>
+                <div>
+                  <div class="tl-title">Build</div>
+                  <div class="tl-sub muted">Python + SQL + dashboards</div>
+                </div>
+              </div>
+              <div class="tl">
+                <div class="dot"></div>
+                <div>
+                  <div class="tl-title">Validate</div>
+                  <div class="tl-sub muted">Metrics, tests, sanity checks</div>
+                </div>
+              </div>
+              <div class="tl">
+                <div class="dot"></div>
+                <div>
+                  <div class="tl-title">Ship</div>
+                  <div class="tl-sub muted">Docs + clean deliverables</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel wide reveal">
+            <h3>What I’m looking for</h3>
+            <p>
+              Internships / roles where I can work on data engineering, analytics, machine learning,
+              or backend systems — and learn from strong engineering teams.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="work" class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Projects</h2>
+          <p class="muted">Filter projects and click a card to see details.</p>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Project filters">
+          <button class="pill active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="pill" data-filter="data" role="tab">Data / SQL</button>
+          <button class="pill" data-filter="ml" role="tab">Machine Learning</button>
+          <button class="pill" data-filter="app" role="tab">Apps</button>
+        </div>
+
+        <div class="grid cards">
+          <!-- card -->
+          <article class="card reveal" data-tags="data">
+            <div class="card-badge">Azure SQL</div>
+            <h3>Patient Assistant Network Database</h3>
+            <p class="muted">
+              ER modeling + schema design + optimized queries for reporting and analytics.
+            </p>
+            <div class="stack">
+              <span>Azure SQL</span><span>ERD</span><span>SQL</span>
+            </div>
+            <button class="card-open" data-modal="m1">View details</button>
+          </article>
+
+          <article class="card reveal" data-tags="ml data">
+            <div class="card-badge">ML Workflow</div>
+            <h3>Disease Prediction System</h3>
+            <p class="muted">
+              Spreadsheet preprocessing + Python modeling + evaluation tracking.
+            </p>
+            <div class="stack">
+              <span>Python</span><span>Pandas</span><span>Sheets</span>
+            </div>
+            <button class="card-open" data-modal="m2">View details</button>
+          </article>
+
+          <article class="card reveal" data-tags="ml">
+            <div class="card-badge">Text Analytics</div>
+            <h3>Cyberbullying Detection Analysis</h3>
+            <p class="muted">
+              24k+ records analyzed for patterns and trends with reproducible reporting.
+            </p>
+            <div class="stack">
+              <span>Python</span><span>Excel</span><span>NLP</span>
+            </div>
+            <button class="card-open" data-modal="m3">View details</button>
+          </article>
+
+          <article class="card reveal" data-tags="app">
+            <div class="card-badge">Agile</div>
+            <h3>Music Streaming App</h3>
+            <p class="muted">
+              Agile team project using Jira/Trello to deliver a streaming prototype.
+            </p>
+            <div class="stack">
+              <span>JavaScript</span><span>Agile</span><span>Jira</span>
+            </div>
+            <button class="card-open" data-modal="m4">View details</button>
+          </article>
+
+          <article class="card reveal" data-tags="data app">
+            <div class="card-badge">System Design</div>
+            <h3>Blood Bank Management System</h3>
+            <p class="muted">
+              Donor + inventory tracking with SQL and reporting outputs.
+            </p>
+            <div class="stack">
+              <span>SQL</span><span>Reporting</span><span>Design</span>
+            </div>
+            <button class="card-open" data-modal="m5">View details</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Skills</h2>
+          <p class="muted">A mix of core tools + strengths I use to ship work.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="panel reveal">
+            <h3>Programming</h3>
+            <div class="bars">
+              <div class="bar">
+                <div class="bar-top"><span>Python</span><span class="muted">Strong</span></div>
+                <div class="track"><div class="fill" style="--p: 88"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar-top"><span>SQL</span><span class="muted">Strong</span></div>
+                <div class="track"><div class="fill" style="--p: 84"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar-top"><span>JavaScript</span><span class="muted">Good</span></div>
+                <div class="track"><div class="fill" style="--p: 70"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar-top"><span>Java</span><span class="muted">Good</span></div>
+                <div class="track"><div class="fill" style="--p: 68"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel reveal">
+            <h3>Data & Tools</h3>
+            <div class="chips big">
+              <span class="chip">Pandas</span>
+              <span class="chip">NumPy</span>
+              <span class="chip">Excel</span>
+              <span class="chip">Google Sheets</span>
+              <span class="chip">Azure SQL</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">Git</span>
+              <span class="chip">Jira</span>
+              <span class="chip">Trello</span>
+              <span class="chip">Confluence</span>
+            </div>
+          </div>
+
+          <div class="panel wide reveal">
+            <h3>Strengths</h3>
+            <div class="strengths">
+              <div class="strength">
+                <div class="s-ico" aria-hidden="true">⚡</div>
+                <div>
+                  <div class="s-title">Fast iteration</div>
+                  <div class="muted">Ship improvements quickly with clear metrics.</div>
+                </div>
+              </div>
+              <div class="strength">
+                <div class="s-ico" aria-hidden="true">🧠</div>
+                <div>
+                  <div class="s-title">Problem solving</div>
+                  <div class="muted">Break complex tasks into clean, testable steps.</div>
+                </div>
+              </div>
+              <div class="strength">
+                <div class="s-ico" aria-hidden="true">🧾</div>
+                <div>
+                  <div class="s-title">Documentation</div>
+                  <div class="muted">Readable outputs: notes, reports, and clean structure.</div>
+                </div>
+              </div>
+              <div class="strength">
+                <div class="s-ico" aria-hidden="true">🎯</div>
+                <div>
+                  <div class="s-title">Attention to detail</div>
+                  <div class="muted">Consistency and correctness in deliverables.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Contact</h2>
+          <p class="muted">Best way to reach me is email. You can also connect on LinkedIn.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="panel reveal">
+            <h3>Let’s talk</h3>
+            <p class="muted">
+              I’m open to internships and collaborative opportunities. If you have a role or project in mind, send a note.
+            </p>
+
+            <div class="contact-links">
+              <a class="contact-link" href="mailto:Sai.Krishna.Bharadwaj.Burra-1@ou.edu">
+                <span class="cl-k">Email</span>
+                <span class="cl-v">Sai.Krishna.Bharadwaj.Burra-1@ou.edu</span>
+              </a>
+              <a class="contact-link" href="https://github.com/krizz1909" target="_blank" rel="noreferrer">
+                <span class="cl-k">GitHub</span>
+                <span class="cl-v">github.com/krizz1909</span>
+              </a>
+              <a class="contact-link" href="https://www.linkedin.com/in/bharadwaj-b-s-k-4a99a11b1/" target="_blank" rel="noreferrer">
+                <span class="cl-k">LinkedIn</span>
+                <span class="cl-v">bharadwaj-b-s-k</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="panel reveal form" onsubmit="return window.sendMail(event)">
+            <h3>Quick message</h3>
+            <label>
+              <span>Name</span>
+              <input id="fName" required placeholder="Your name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input id="fEmail" type="email" required placeholder="you@example.com" />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea id="fMsg" required placeholder="What would you like to discuss?"></textarea>
+            </label>
+            <button class="btn primary" type="submit">Send</button>
+            <p class="muted tiny">This opens your email client (no backend needed).</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container foot">
+        <span class="muted">© <span id="year"></span> Sai Krishna Bharadwaj Burra</span>
+        <span class="muted">Built on GitHub Pages • <a class="muted link" href="#top">Back to top</a></span>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to top button -->
+  <button id="topBtn" class="topbtn" aria-label="Back to top" title="Back to top">↑</button>
+
+  <!-- MODALS -->
+  <div class="modal" id="m1" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Patient Assistant Network Database">
+      <button class="modal-x" data-close>✕</button>
+      <h3>Patient Assistant Network Database</h3>
+      <p class="muted">What I did</p>
+      <ul class="bullets">
+        <li>Designed ER diagram and relational schema.</li>
+        <li>Implemented tables, constraints, and queries for reporting.</li>
+        <li>Improved query performance by indexing and cleanup.</li>
+      </ul>
+      <div class="modal-actions">
+        <a class="btn" href="#" onclick="alert('Add your repo link here in the HTML'); return false;">Add repo link</a>
+        <a class="btn ghost" href="#" data-close>Close</a>
+      </div>
     </div>
   </div>
-</section>
 
-<section id="about" class="section">
-  <div class="container">
-    <h2>About</h2>
-    <p>
-      I am a graduate student in Computer Science focused on building structured,
-      reliable data systems. My experience includes database design, data cleaning,
-      machine learning workflows, and backend development. I enjoy solving practical
-      problems by transforming raw data into meaningful insights.
-    </p>
-  </div>
-</section>
-
-<section id="projects" class="section alt">
-  <div class="container">
-    <h2>Projects</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <h3>Patient Assistant Network Database</h3>
-        <p>
-          Designed Azure SQL database with ER modeling and optimized queries for
-          reporting and analytics.
-        </p>
+  <div class="modal" id="m2" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Disease Prediction System">
+      <button class="modal-x" data-close>✕</button>
+      <h3>Disease Prediction System</h3>
+      <p class="muted">What I did</p>
+      <ul class="bullets">
+        <li>Cleaned and structured data using spreadsheets.</li>
+        <li>Built modeling workflow in Python and tracked results.</li>
+        <li>Summarized metrics and insights for reporting.</li>
+      </ul>
+      <div class="modal-actions">
+        <a class="btn" href="#" onclick="alert('Add your repo link here in the HTML'); return false;">Add repo link</a>
+        <a class="btn ghost" href="#" data-close>Close</a>
       </div>
-
-      <div class="card">
-        <h3>Disease Prediction System</h3>
-        <p>
-          Built ML workflow with preprocessing in spreadsheets and model evaluation
-          in Python.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Cyberbullying Detection Analysis</h3>
-        <p>
-          Analyzed 24K+ records using Python and Excel to detect patterns and trends.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Music Streaming App</h3>
-        <p>
-          Agile-based team project using Jira and Trello to deliver a streaming prototype.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Blood Bank Management System</h3>
-        <p>
-          Designed and implemented system for donor and inventory tracking with SQL.
-        </p>
-      </div>
-
     </div>
   </div>
-</section>
 
-<section id="skills" class="section">
-  <div class="container">
-    <h2>Skills</h2>
-
-    <div class="grid skills">
-
-      <div>
-        <h4>Programming</h4>
-        <p>Python, Java, JavaScript, SQL, HTML/CSS</p>
+  <div class="modal" id="m3" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Cyberbullying Detection Analysis">
+      <button class="modal-x" data-close>✕</button>
+      <h3>Cyberbullying Detection Analysis</h3>
+      <p class="muted">What I did</p>
+      <ul class="bullets">
+        <li>Worked with 24k+ entries and explored trends and distributions.</li>
+        <li>Used Python + Excel to organize and report findings.</li>
+        <li>Created clean summaries to communicate insights.</li>
+      </ul>
+      <div class="modal-actions">
+        <a class="btn" href="#" onclick="alert('Add your repo link here in the HTML'); return false;">Add repo link</a>
+        <a class="btn ghost" href="#" data-close>Close</a>
       </div>
-
-      <div>
-        <h4>Databases</h4>
-        <p>MySQL, MongoDB, Azure SQL</p>
-      </div>
-
-      <div>
-        <h4>Data Tools</h4>
-        <p>Pandas, NumPy, Excel, Google Sheets</p>
-      </div>
-
-      <div>
-        <h4>Tools</h4>
-        <p>Git, Jira, Trello, Confluence, Microsoft Office</p>
-      </div>
-
     </div>
   </div>
-</section>
 
-<section id="contact" class="section alt">
-  <div class="container">
-    <h2>Contact</h2>
-    <p>Open to internships and collaborative opportunities.</p>
-
-    <div class="contact-links">
-      <a href="mailto:Sai.Krishna.Bharadwaj.Burra-1@ou.edu">Sai.Krishna.Bharadwaj.Burra-1@ou.edu</a>
-      <a href="https://github.com/krizz1909" target="_blank">github.com/krizz1909</a>
-      <a href="https://www.linkedin.com/in/bharadwaj-b-s-k-4a99a11b1/" target="_blank">LinkedIn Profile</a>
+  <div class="modal" id="m4" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Music Streaming App">
+      <button class="modal-x" data-close>✕</button>
+      <h3>Music Streaming App</h3>
+      <p class="muted">What I did</p>
+      <ul class="bullets">
+        <li>Planned tasks with Agile tooling (Jira/Trello).</li>
+        <li>Built a prototype with streaming-oriented features.</li>
+        <li>Coordinated work in a team workflow.</li>
+      </ul>
+      <div class="modal-actions">
+        <a class="btn" href="#" onclick="alert('Add your repo link here in the HTML'); return false;">Add repo link</a>
+        <a class="btn ghost" href="#" data-close>Close</a>
+      </div>
     </div>
   </div>
-</section>
 
-<footer>
-  <div class="container">
-    <p>© 2026 Sai Krishna Bharadwaj Burra</p>
+  <div class="modal" id="m5" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Blood Bank Management System">
+      <button class="modal-x" data-close>✕</button>
+      <h3>Blood Bank Management System</h3>
+      <p class="muted">What I did</p>
+      <ul class="bullets">
+        <li>Designed donor/inventory tracking and reporting structure.</li>
+        <li>Implemented database logic and basic reporting outputs.</li>
+        <li>Maintained structured records for easy querying.</li>
+      </ul>
+      <div class="modal-actions">
+        <a class="btn" href="#" onclick="alert('Add your repo link here in the HTML'); return false;">Add repo link</a>
+        <a class="btn ghost" href="#" data-close>Close</a>
+      </div>
+    </div>
   </div>
-</footer>
 
-<script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

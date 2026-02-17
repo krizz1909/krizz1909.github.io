@@ -660,3 +660,7 @@ input:focus, textarea:focus{
   .grid.cards{ grid-template-columns: 1fr; }
   .strengths{ grid-template-columns: 1fr; }
 }
+html.no-js .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
